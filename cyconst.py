@@ -1,0 +1,20 @@
+# Methods
+CYCLONE_STATUS_INITIALIZED = 'initialized'
+CYCLONE_STATUS_CREATE_STARTED = 'create-started'
+CYCLONE_STATUS_CREATE_FAILED = 'create-failed'
+CYCLONE_STATUS_CREATED = 'created'
+CYCLONE_STATUS_DESTROY_STARTED = 'destroy-started'
+CYCLONE_STATUS_DESTROY_FAILED = 'destroy-failed'
+CYCLONE_STATUS_DESTROYED = 'destroyed'
+
+# Actions
+CYCLONE_METHOD_CREATE = 'site_create'
+CYCLONE_METHOD_DESTROY = 'site_destroy'
+
+# Method to outcome mapping
+# This is actually a list of associative arrays:
+METHOD_OUTCOMES = {
+        CYCLONE_METHOD_CREATE:[CYCLONE_STATUS_CREATED, CYCLONE_STATUS_CREATE_FAILED],
+        CYCLONE_METHOD_DESTROY:[CYCLONE_STATUS_DESTROYED, CYCLONE_STATUS_DESTROY_FAILED]
+    }
+
